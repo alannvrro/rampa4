@@ -1,0 +1,29 @@
+#container{
+    background-color: #f2f9f5;
+}
+
+
+
+/*#container h1,h3{
+    padding-left: 10%;
+}
+
+#carouselExampleAutoplaying{
+    width: 600px;
+    padding-left: 10%;
+}
+#container .col-4{
+    padding-right: 10%;
+}*/
+
+#cartas {
+    text-align: center;
+}
+#cartas .row{
+    margin-left: 12%;
+}
+#cartas .card{
+    display: flex;
+    margin: 25px;
+    border-color: transparent;
+}

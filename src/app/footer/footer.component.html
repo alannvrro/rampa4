@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha384-o9a+bZk7Fc9hQVJpFJqj5ahh+3Bq3gI0pGjqZTlHVovcfk6if48uZ6DtwxGsK8xt" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha384-e3mX6lpoQzPh8x0e7dMYMC7ZwZcFY6Dbcn0jsDWsgdIZn36H1uN7Zs0bKkkN1K7Y" crossorigin=""></script>
+
+
+<footer class="bg-dark text-light pt-5">
+    <div class="container">
+      <div class="row">
+
+        <!-- Columna 1: Información de la empresa -->
+        <div class="col-md-4 mb-4">
+          <h5>Acerca de Nosotros</h5>
+          <p>Encuéntranos en la siguiente ubicación:</p>
+          <!-- Contenedor del mapa -->
+          <div id="map"></div>
+        </div>
+
+        <script>
+          // Inicializar el mapa y establecer el centro y el nivel de zoom
+          var map = L.map('map').setView([20.690470538504037, -103.40433606302454], 15); // Cambia las coordenadas a tu ubicación
+      
+          // Agregar el mapa base de OpenStreetMap
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          }).addTo(map);
+      
+          // Agregar un marcador en la ubicación deseada
+          L.marker([20.6596988, -103.3496092]).addTo(map)
+            .bindPopup('Ubicación de nuestra empresa.')
+            .openPopup();
+        </script>
+
+        <!-- Columna 2: Links de navegación -->
+        <div class="col-md-4 mb-4">
+          <h5>Enlaces útiles</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light">Inicio</a></li>
+            <li><a href="#" class="text-light">Servicios</a></li>
+            <li><a href="#" class="text-light">Contacto</a></li>
+            <li><a href="#" class="text-light">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Redes Sociales -->
+        <div class="col-md-4 mb-4">
+          <h5>Redes Sociales</h5>
+          <ul class="list-unstyled d-flex">
+            <li><a href="#" class="text-light me-3"><img class="img-fluid" src="../assets/img/FACEBOOK.png" alt=""> Facebook</a></li>
+            <li><a href="#" class="text-light me-3"><img class="img-fluid" src="../assets/img/TWITTER.png" alt=""> Twitter</a></li>
+            <li><a href="#" class="text-light"><img class="img-fluid" src="../assets/img/INSTAGRAM.png" alt=""> Instagram</a></li>
+            <li><a href="#" class="text-light"><img class="img-fluid" src="../assets/img/INSTAGRAM.png" alt=""> Instagram</a></li>
+        </ul>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="text-center py-3">
+        <p class="mb-0">&copy; 2024 MiEmpresa. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>

@@ -1,0 +1,45 @@
+
+<div class="container form-container">
+    <h2 class="form-title">Formulario de Evento</h2>
+
+    <form id="eventoForm" novalidate>
+      <!-- Nombre Completo -->
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre Completo</label>
+        <input type="text" class="form-control" id="nombre" minlength="3" placeholder="Ej. Juan Pérez" required>
+      </div>
+
+      <!-- Correo Electrónico -->
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="correo" placeholder="Ej. correo@ejemplo.com" required>
+      </div>
+
+      <!-- Tipo de Evento -->
+      <div class="mb-3">
+        <label for="tipoEvento" class="form-label">Tipo de Evento</label>
+        <select class="form-select" id="tipoEvento" required>
+          <option value="" disabled selected>Selecciona el tipo de evento</option>
+          <option value="conferencia">Conferencia</option>
+          <option value="taller">Taller</option>
+          <option value="reunion">Reunión</option>
+          <option value="fiesta">Fiesta</option>
+        </select>
+      </div>
+
+      <!-- Fecha de Evento Estimada -->
+      <div class="mb-3">
+        <label for="fechaEvento" class="form-label">Fecha de Evento Estimada</label>
+        <input type="date" class="form-control" id="fechaEvento" required>
+      </div>
+
+      <!-- Mensaje -->
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="3" required minlength="10" placeholder="Escribe un mensaje..."></textarea>
+      </div>
+
+      <!-- Botón de Enviar -->
+      <button type="submit" class="btn submit-btn">Enviar</button>
+    </form>
+  </div><br><br>
